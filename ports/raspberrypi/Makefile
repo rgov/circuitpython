@@ -279,6 +279,13 @@ SRC_C += \
 
 endif
 
+ifeq ($(CIRCUITPY_PPS),1)
+SRC_C += \
+  bindings/pps/__init__.c \
+  bindings/pps/PPSPin.c \
+
+endif
+
 ifeq ($(CIRCUITPY_SSL),1)
 CFLAGS += -isystem $(TOP)/mbedtls/include
 SRC_MBEDTLS := $(addprefix lib/mbedtls/library/, \

@@ -303,6 +303,9 @@ endif
 ifeq ($(CIRCUITPY_PICODVI),1)
 SRC_PATTERNS += picodvi/%
 endif
+ifeq ($(CIRCUITPY_PPS),1)
+SRC_PATTERNS += pps/%
+endif
 ifeq ($(CIRCUITPY_PS2IO),1)
 SRC_PATTERNS += ps2io/%
 endif
