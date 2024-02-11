@@ -772,6 +772,9 @@ def link_objects(env, native_qstr_vals_len):
                 "mp_stream_readinto_obj",
                 "mp_stream_unbuffered_readline_obj",
                 "mp_stream_write_obj",
+
+                "gpio_set_irq_enabled",
+                "gpio_set_irq_enabled_with_callback",
             ]
         )
     }

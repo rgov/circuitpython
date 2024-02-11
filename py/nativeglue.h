@@ -171,6 +171,9 @@ typedef struct _mp_fun_table_t {
     const mp_obj_fun_builtin_var_t *stream_readinto_obj;
     const mp_obj_fun_builtin_var_t *stream_unbuffered_readline_obj;
     const mp_obj_fun_builtin_var_t *stream_write_obj;
+
+    void (*gpio_set_irq_enabled)(uint gpio, uint32_t events, bool enabled);
+    void (*gpio_set_irq_enabled_with_callback)(uint gpio, uint32_t events, bool enabled, void (*callback)(uint gpio, uint32_t event_mask));
 } mp_fun_table_t;
 
 #if (MICROPY_EMIT_NATIVE && !MICROPY_DYNAMIC_COMPILER) || MICROPY_ENABLE_DYNRUNTIME
